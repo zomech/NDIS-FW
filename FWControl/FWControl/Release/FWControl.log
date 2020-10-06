@@ -1,0 +1,7 @@
+﻿  Source.c
+C:\Users\97254\source\repos\FWControl\FWControl\Source.c(306,1): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'DWORD', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  FWControl.vcxproj -> C:\Users\97254\source\repos\FWControl\Release\FWControl.exe

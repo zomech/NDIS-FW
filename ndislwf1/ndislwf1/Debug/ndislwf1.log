@@ -1,0 +1,10 @@
+﻿  Building 'ndislwf1' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping Debug\ndislwf1.inf
+  Stamping [Version] section with DriverVer=06/01/2020,16.48.36.417
+  Packet.c
+C:\Users\Ziv\source\repos\ndislwf1\ndislwf1\Packet.c(109,11): error C2220: the following warning is treated as an error
+C:\Users\Ziv\source\repos\ndislwf1\ndislwf1\Packet.c(109,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ziv\source\repos\ndislwf1\ndislwf1\Packet.c(109,28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ziv\source\repos\ndislwf1\ndislwf1\Packet.c(394,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ziv\source\repos\ndislwf1\ndislwf1\Packet.c(416,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ziv\source\repos\ndislwf1\ndislwf1\Packet.c(488,23): warning C4018: '<': signed/unsigned mismatch
