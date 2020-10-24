@@ -63,7 +63,7 @@ typedef struct {
 	unsigned long long rules_count;
 	FW_Incoming_Rule_Update rules_info[1];
 
-}FW_Incoming_Policy_Update, *PFW_Incoming_Policy_Update;
+}FW_Incoming_Policy_Update, * PFW_Incoming_Policy_Update;
 
 typedef struct FWCONTROL {
 
@@ -73,14 +73,14 @@ typedef struct FWCONTROL {
 	char policy_action;
 	char rule_action;
 
-}FWCONTROL_OPTIONS, *PFWCONTROL_OPTIONS;
+}FWCONTROL_OPTIONS, * PFWCONTROL_OPTIONS;
 
 typedef struct {
 
 	unsigned long long rules_count;
 	FW_Incoming_Rule rules[1];
 
-}IncomingFirewall, *PIncomingFirewall;
+}IncomingFirewall, * PIncomingFirewall;
 
 
 void print_help()
@@ -130,7 +130,7 @@ void print_fw(BYTE* buf, char policy)
 
 	for (int i = 0; i < incoming_fw->rules_count; i++)
 	{
-		
+
 		if (incoming_fw->rules[i].action == FWAction_Drop)
 		{
 			action = drop;
@@ -143,7 +143,7 @@ void print_fw(BYTE* buf, char policy)
 		{
 			action = modify;
 		}
-		
+
 		if (incoming_fw->rules[i].protocol == IPPROTO_TCP)
 		{
 			protocol = tcp;
@@ -210,7 +210,7 @@ BOOL parse_arguments(int argc, char* argv[], FWCONTROL_OPTIONS* options) {
 				options->policy = 2;
 
 			}
-			
+
 			if (options->policy_action == 3)
 			{
 				i = argc;
@@ -331,7 +331,7 @@ int main(int argc, char* argv[]) {
 			substructor = 1;
 			options.policy = 1;
 		}
-			
+
 
 		while (options.policy >= 0)
 		{
@@ -358,13 +358,13 @@ int main(int argc, char* argv[]) {
 			options.policy -= substructor;
 		}
 
-		
+
 	}
 
 	// Add\remove\modify rule
 	else if ((options.policy_action == FWRule_Append || options.policy_action == FWRule_Delete || options.policy_action == FWRule_Modify)
-			&& (options.policy == FWPolicy_Incoming || options.policy == FWPolicy_Outgoing))
-	{ 
+		&& (options.policy == FWPolicy_Incoming || options.policy == FWPolicy_Outgoing))
+	{
 		fw_update.rules_info[0].action = options.policy_action;
 		fw_update.rules_info[0].policy = options.policy;
 		fw_update.rules_info[0].rule.action = options.rule_action;
